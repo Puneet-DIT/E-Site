@@ -1,0 +1,47 @@
+<div class="header">
+  <h2 class="logo" routerLink="./">E-Site</h2>
+  <div class="mid">
+    <div class="categories" (click)="OpenCategoriesList()">
+      <h4 class="heading">Categories</h4>
+      <mat-icon *ngIf="!isCategoriesOpen" class="icon"
+        >keyboard_arrow_down</mat-icon
+      >
+      <mat-icon *ngIf="isCategoriesOpen" class="icon"
+        >keyboard_arrow_right</mat-icon
+      >
+    </div>
+    <div class="search">
+      <input class="search-inp" type="text" placeholder="Search" />
+      <!-- <p class="plc">Search</p> -->
+      <mat-icon class="s-icon">search</mat-icon>
+    </div>
+  </div>
+  <div class="right">
+    <mat-icon class="cart" routerLink="./cart">shopping_cart</mat-icon>
+    <button *ngIf="!isLoggedIn" class="login" routerLink="login">LOGIN</button>
+    <button *ngIf="!isLoggedIn" class="register" routerLink="register">
+      SignUp
+    </button>
+    <div *ngIf="isLoggedIn" class="profile" (clickOutside)="close()">
+      <img class="pp" src="./../../../assets/avatar.png" alt="" />
+      <div class="name-des">
+        <p class="name">{{ name }}</p>
+      </div>
+      <button class="drop-btn" (click)="btnClick()">
+        <mat-icon class="drop-icon">keyboard_arrow_down</mat-icon>
+      </button>
+      <div *ngIf="isOpen" class="drop-menu">
+        <ul>
+          <li>
+            <mat-icon class="ic">person</mat-icon
+            ><a routerLink="./../profile">Profile</a>
+          </li>
+          <li>
+            <mat-icon class="ic">logout</mat-icon
+            ><a (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

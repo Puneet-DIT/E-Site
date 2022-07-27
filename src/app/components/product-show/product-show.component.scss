@@ -1,0 +1,38 @@
+.card {
+  margin: 1em;
+  padding: 1em;
+  padding-bottom: 0;
+  border: 0.1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  .image {
+    width: 10em;
+    height: 10em;
+    border-radius: 5px;
+    margin-right: 1.5em;
+    cursor: pointer;
+  }
+  .info {
+    h2{
+        cursor: pointer;
+    }
+    .rating {
+      mat-icon {
+        color: #daa520;
+        font-size: 1.5em;
+      }
+    }
+    .price{
+        color: #D0342C;
+        display: flex;
+        align-items: flex-start;
+        font-size: 1.5em;
+        .d{
+            font-size: 1em;
+            margin-right: 0.2em;
+            margin-bottom: 1em;
+        }
+    }
+  }
+}

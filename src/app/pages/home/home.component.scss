@@ -1,0 +1,137 @@
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .ads-container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 16px #f1f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+    padding: 0.5em;
+    img{
+        display: none;
+    }
+    img.image-active{
+        display: block;
+        width: 90%;
+        height: 36em;
+    }
+    // dots
+    .carousel-dot{
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 1rem;
+        .dot{
+            height: 13px;
+            width: 13px;
+            cursor: pointer;
+            background-color: #fff;
+            margin: 0 5px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: opacity 0.6s ease-in-out;
+            opacity: 0.5;
+        }
+        .active, .dot:hover{
+            opacity: 1;
+        }
+    }
+    // controls 
+    .carousel-btn{
+        cursor: pointer;
+        background: 0 0;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+        border: 0;
+        text-align: center;
+    }
+    .prev{
+        left: 5%;
+    }
+    .next{
+        right: 5%;
+    }
+    .icon-carousel{
+        color: #fff;
+        opacity: 0.5;
+        transition: all 0.15s ease;
+    }
+    .icon-carousel:hover{
+        opacity: 0.9;
+    }
+    .icon-carousel:active{
+        opacity: 0.5;
+    }
+    .icon{
+        font-size: 4em;
+    }
+  }
+
+  .heading{
+    font-weight: 500;
+    font-size: 2.5em;
+  }
+
+  .explore{
+    height: 34em;
+    width: 100%;
+    border: 1px solid black;
+    margin: 1em 0;
+    padding: 1em;
+    .exp-btn{
+        margin-top: 0.5em;
+        outline: none;
+        height: 2.6em;
+        padding: 0.5em 1em;
+        font-size: 1em;
+        font-weight: 500;
+        background-color: #fff;
+        border: 1px solid black;
+        transition: opacity 200ms ease;
+    }
+    .exp-btn:hover{
+        color: white;
+        background-color: rgb(101, 101, 101);
+        border: none;
+    }
+    .lists{
+        margin-top: 2em;
+        width: 100%;
+        height: 60%;
+        display: flex;
+    }
+  }
+
+}
+
+.trans{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}

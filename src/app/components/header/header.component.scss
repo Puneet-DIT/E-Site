@@ -1,0 +1,231 @@
+.header {
+  display: flex;
+  align-items: center !important;
+  height: 4.4em;
+  width: 100%;
+  background: #fefefe;
+  border: 1px solid #f5f5f0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Inter";
+  font-style: normal;
+
+  .logo {
+    cursor: pointer;
+    margin-left: 1em;
+    color: #6f09ad;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-top: 0.5em;
+  }
+
+  .mid {
+    margin: auto !important;
+    position: relative;
+    width: 36%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 8em;
+    .categories {
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      h4,
+      .icon {
+        cursor: pointer;
+      }
+      h4 {
+        margin-top: 0.9em;
+      }
+    }
+    .categories:hover {
+      opacity: 0.8;
+      color: #6f09ad;
+    }
+
+    .search {
+      height: 2.6em;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      .search-inp {
+        padding-left: 0.9em;
+        font-size: 1.1em;
+        border-radius: 1em;
+        width: 100%;
+        height: 100%;
+      }
+      .search-inp::placeholder {
+        font-size: 0.9em !important;
+        color: rgb(82, 82, 82);
+      }
+      .plc {
+        position: absolute;
+        margin-left: 1em;
+      }
+      .s-icon {
+        font-size: 1.6em;
+        position: absolute;
+        right: 0.9em;
+        color: rgb(82, 82, 82);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    .cart {
+      color: black;
+      font-size: 2em;
+      margin-right: 1.5em;
+      margin-bottom: 0.3em;
+      cursor: pointer;
+    }
+    .cart:hover {
+      color: #6f09ad;
+    }
+
+    .login,
+    .register {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      text-transform: uppercase;
+      font-size: 0.9em;
+      font-weight: 600;
+      height: 2.4em;
+      width: 6em;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
+
+    .login {
+      border: 1px solid black;
+      background-color: #fff;
+      margin-right: 1em;
+    }
+    .login:hover {
+      background-color: #e3e3e3;
+    }
+
+    .register {
+      background-color: black;
+      border: black;
+      color: #fff;
+      margin-right: 2em;
+    }
+    .register:hover {
+      background-color: rgb(215, 215, 215);
+      border: 1px solid black;
+      color: black;
+    }
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2.5em;
+  color: #fff;
+  line-height: 0;
+  .pp {
+    height: 3.6em;
+    width: 3.6em;
+    border-radius: 50%;
+    margin-left: 1em;
+    margin-right: 0.5em;
+  }
+  .name-des {
+    padding-top: 1.1em;
+    display: flex;
+    flex-direction: column;
+    .name {
+      color: black;
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+    .des {
+      font-size: 1em;
+      margin-top: 0.7em;
+    }
+  }
+  .drop-btn {
+    background: none;
+    border: none;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .drop-btn:hover {
+    opacity: 1.5;
+  }
+  .drop-icon {
+    color: black;
+    height: 0.7em;
+    width: 1.3em;
+  }
+}
+.drop-menu::before {
+  content: "";
+  position: absolute;
+  top: -0.55em;
+  right: 2.2em;
+  width: 1em;
+  height: 1em;
+  border-top: 0.1em solid black;
+  border-left: 0.1em solid black;
+  background-color: rgba(255, 255, 255, 0.92);
+  transform: rotate(45deg);
+}
+.drop-menu {
+  position: absolute;
+  top: 8.5vh;
+  right: 1em;
+  padding: 1em 0.2em 0.3em 0.2em;
+  background: white;
+  width: 12em;
+  border: 0.1em solid black;
+  box-sizing: 0 0.33em 1.44em rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  transition: 0.2s;
+  ul li {
+    list-style: none;
+    // border-top: 1px solid rgb(160, 160, 160);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    a {
+      text-decoration: none;
+      display: inline-block;
+      color: black;
+      font-size: 1.5em;
+      font-weight: 500;
+      transition: 0.5s;
+      opacity: 0.7;
+      margin-right: 2.5em;
+      margin-top: 0.77em;
+    }
+    a:hover {
+      opacity: 1;
+    }
+  }
+  li {
+    margin-bottom: 0.8em;
+  }
+}
+.ic {
+  color: black;
+  font-size: 2em;
+  margin-right: 0.8em;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+li:hover .ic {
+  opacity: 1;
+}

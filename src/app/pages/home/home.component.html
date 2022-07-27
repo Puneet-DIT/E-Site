@@ -1,0 +1,41 @@
+<div class="container">
+  <div *ngIf="images && images.length > 0" class="ads-container">
+    <img
+      *ngFor="let image of images; let i = index"
+      [src]="image.imageSrc"
+      [alt]="image.imageAlt"
+      class="trans"
+      [ngClass]="{ 'image-active': selectedIndex === i }"
+    />
+    <div class="carousel-dot">
+      <span
+        *ngFor="let image of images; let i = index"
+        class="dot"
+        [ngClass]="{ active: selectedIndex === i }"
+        (click)="selectImage(i)"
+      ></span>
+    </div>
+
+    <div class="carousel-btn prev">
+      <mat-icon class="icon-carousel icon" (click)="prevImage()">navigate_before</mat-icon>
+    </div>
+    <div class="carousel-btn next">
+      <mat-icon class="icon-carousel icon" (click)="nextImage()">navigate_next</mat-icon>
+    </div>
+  </div>
+  <h1 class="heading">Explore Your Products</h1>
+  <div class="explore">
+    <h2>Home Appliances</h2>
+    <button class="exp-btn" (click)="OpenCatalogue()">Explore more</button>
+    <div class="lists">
+      <app-product-info *ngFor="let i of homeProducts"></app-product-info>
+    </div>
+  </div>
+  <div class="explore">
+    <h2>Fitness & Sports</h2>
+    <button class="exp-btn" (click)="OpenCatalogue()">Explore more</button>
+    <div class="lists">
+      <app-product-info *ngFor="let i of homeProducts"></app-product-info>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 86%;
+  padding: 1em 2em;
+  margin-top: 4em;
+
+  .left {
+    width: 20%;
+    .example-radio-group {
+      display: flex;
+      flex-direction: column;
+      margin: 15px 0;
+      align-items: flex-start;
+    }
+
+    .example-radio-button {
+      margin: 5px;
+    }
+    .example-section {
+        margin: 12px 0;
+        mat-icon{
+            color: #daa520;
+            font-size: 1.5em;
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+        }
+      }
+      
+  }
+  .right {
+    width: 70%;
+    border-left: 1.5px solid black;
+    padding: 1em;
+  }
+}

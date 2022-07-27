@@ -1,0 +1,75 @@
+.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  .left{
+    width: 70%;
+    height: 100%;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+  }
+
+  .right{
+    width: 60%;
+    height: 100%;
+    padding-left: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(223, 214, 230);
+    .heading{
+        font-weight: 600;
+        font-size: 3em;
+        margin-bottom: 2em;
+        color: #6f09ad;
+    }
+  .example-form {
+      min-width: 150px;
+      max-width: 500px;
+      width: 100%;
+    }
+  
+    .example-full-width {
+      width: 100%;
+    }
+  
+    .example-container .mat-form-field + .mat-form-field {
+      margin-left: 8px;
+    }
+    
+    .example-right-align {
+      text-align: right;
+    }
+    
+    input.example-right-align::-webkit-outer-spin-button,
+    input.example-right-align::-webkit-inner-spin-button {
+      display: none;
+    }
+    
+    input.example-right-align {
+      -moz-appearance: textfield;
+    }
+  
+    .inp{
+      margin-bottom: 1.5em;
+    }
+    
+    .btn{
+        height: 2em;
+        border: none;
+        background-color: #39145a;
+        color: white;
+        border-radius: 2px;
+        outline: none;
+        font-size: 1.4em;
+        font-weight: 500;
+        padding: 0.2em 1em;
+    }
+    .btn:hover{
+        background-color: rgb(134, 102, 155);
+    }
+  }
+}
